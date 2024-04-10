@@ -4,6 +4,7 @@ from textnode import (TextNode,
                       text_type_italic,
                       text_type_code)
 
+import re
 
 
 def split_nodes_delimiter(old_nodes: list[TextNode], delimiter: str, text_type: str) -> list[TextNode]:
@@ -45,5 +46,11 @@ def split_nodes_delimiter(old_nodes: list[TextNode], delimiter: str, text_type: 
                 out.append(TextNode(text=word_phrase, text_type=old_node.text_type))
             else: # delimited word_phrase, i.e. bold, italic, code, etc.
                 out.append(TextNode(text=word_phrase, text_type=text_type))
-        
+
         return out
+
+def extract_markdown_images(text) -> list[tuple]:
+    return re.findall(r"!\[(.*?)\]\((.*?)\)", text)
+
+def extract_markdown_links(text) -> list[tuple]:
+    return re.findall(r"\[(.*?)\]\((.*?)\)", text)
