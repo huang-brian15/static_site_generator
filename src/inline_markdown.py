@@ -54,6 +54,7 @@ def split_nodes_delimiter(old_nodes: list[TextNode], delimiter: str, text_type: 
     nested elements e.g. bold text inside of italic text. It is possible to add this 
     functionality.
     """
+
     new_nodes = []
 
     for old_node in old_nodes:
@@ -99,6 +100,7 @@ def split_nodes_image(old_nodes: list[TextNode]) -> list[TextNode]:
     are created for the original text and for the image(s). The functionality
     is similar to that of split_nodes_delimiter().
     """
+
     new_nodes = []
 
     for old_node in old_nodes:
@@ -141,6 +143,7 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
     are created for the original text and for the link(s). The functionality
     is similar to that of split_nodes_delimiter().
     """
+    
     new_nodes = []
 
     for old_node in old_nodes:

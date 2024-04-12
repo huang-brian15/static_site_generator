@@ -11,6 +11,8 @@ block_type_unordered_list = "unordered_list"
 block_type_ordered_list = "ordered_list"
 
 
+# Include test cases for this method if needed but 
+# probably not necessary.
 def markdown_to_html_node(markdown: str) -> ParentNode:
     """
     Ths method takes a full piece of markdown and returns
@@ -44,6 +46,8 @@ def markdown_to_blocks(markdown: str) -> list[str]:
     return filtered_blocks
 
 
+# Include test cases for this method if needed but 
+# probably not necessary.
 def block_to_html_node(block: str) -> ParentNode:
     """
     This method takes a block and returns an HTML 
@@ -142,6 +146,7 @@ def text_to_text_nodes_to_leaf_nodes(text: str) -> list[LeafNode]:
     
     Returns a list of LeafNodes.
     """
+    
     text_nodes = text_to_textnodes(text)
     leaf_nodes = []
     for text_node in text_nodes:
