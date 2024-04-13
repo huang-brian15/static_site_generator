@@ -2,8 +2,7 @@ import os
 import shutil
 
 from copy_static import copy_files_recursive
-from gen_content import (generate_page,
-                         generate_pages_recursive)
+from gen_content import generate_pages_recursive
 
 def main():
     static_path = "./static"

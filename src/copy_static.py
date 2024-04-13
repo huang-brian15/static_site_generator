@@ -6,6 +6,7 @@ def copy_files_recursive(source_dir_path: str, dest_dir_path: str):
     This method copies all contents (including subdirectories) of a 
     source directory into a destination directory.
     """
+    
     if not os.path.exists(source_dir_path):
         raise ValueError(f"Source directory {source_dir_path} does not exist.")
 
