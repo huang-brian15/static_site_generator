@@ -6,20 +6,12 @@ from inline_markdown import (
     text_to_textnodes
 )
 
+from copy_static import copy_files_recursive
+
 def main():
-    # text_node_obj = TextNode("This is a text node", "bold", "https://www.boot.dev")
-    # print(text_node_obj)
-
-    # text_node_obj = TextNode("This is text with a `code block` word", "text")
-    # new_node = split_nodes_delimiter([text_node_obj], "`", "code")
-
-    # text = "This is text with an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) \
-    #             and ![another](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/dfsdkjfd.png)"
-    
-    # res = extract_markdown_images(text)
-
-    text = "This is **text** with an *italic* word and a `code block` and an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) and a [link](https://boot.dev)"
-    print(text_to_textnodes(text))
+    static_path = "./static"
+    public_path = "./public"
+    copy_files_recursive(static_path, public_path)
 
 if __name__ == '__main__':
     main()

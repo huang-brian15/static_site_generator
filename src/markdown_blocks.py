@@ -15,10 +15,10 @@ block_type_ordered_list = "ordered_list"
 # probably not necessary.
 def markdown_to_html_node(markdown: str) -> ParentNode:
     """
-    Ths method takes a full piece of markdown and returns
-    an HTML ParentNode with the children being instances of
-    HTML ParentNode, with each representing the contents
-    of the block.
+    Ths method takes an entire piece of markdown or just
+    a piece of markdown and returns an HTML ParentNode 
+    with the children being instances of HTML ParentNode, 
+    each representing the contents of the block.
     """
     
     block_nodes = []
@@ -32,8 +32,8 @@ def markdown_to_html_node(markdown: str) -> ParentNode:
 
 def markdown_to_blocks(markdown: str) -> list[str]:
     """
-    This method takes an entire piece of markdown and
-    splits it into blocks of text.
+    This method takes an entire piece of markdown or just
+    a piece of markdown and splits it into blocks of text.
     """
 
     blocks = markdown.split("\n\n")
